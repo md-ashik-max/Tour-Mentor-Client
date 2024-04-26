@@ -6,11 +6,12 @@ export default {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   jost: "'Jost', sans-serif;",
-      //   niconne: "'Niconne', cursive;",
-      //   rancho:"'Rancho', cursive;",
-      // },
+      fontFamily: {
+        jost: "'Jost', sans-serif;",
+        niconne: "'Niconne', cursive;",
+        rancho:"'Rancho', cursive;",
+        playFair:" 'Playfair Display', serif;"
+      },
 
     },
   },
