@@ -9,6 +9,9 @@ import {
 import Root from './layouts/Root';
 import ErrorPage from './components/Pages/ErrorPage';
 import Home from './components/Pages/Home';
+import AddSpots from './components/Pages/AddSpots';
+import Login from './components/Pages/Login';
+import Register from './components/Pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
       {
         path: '/',
         element:<Home></Home>
+      },
+      {
+        path: '/addSpots',
+        element:<AddSpots></AddSpots>
+      },
+      {
+        path: '/login',
+        element:<Login></Login>
+      },
+      {
+        path: '/register',
+        element:<Register></Register>
       },
 
     ]

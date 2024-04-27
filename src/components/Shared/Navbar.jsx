@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import logo from  '../../assets/company logo.png'
 
 
@@ -6,13 +6,13 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/allSpot">All Tourists Spot</NavLink></li>
-        <li><NavLink to="/addSpot">Add Tourists Spot</NavLink></li>
+        <li><NavLink to="/addSpots">Add Tourists Spot</NavLink></li>
         <li><NavLink to="/myList">My List</NavLink></li>
 
     </>
 
     return (
-        <div>
+        <div className="max-w-6xl mx-auto">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -27,18 +27,20 @@ const Navbar = () => {
                     </div>
                     <div className="flex gap-2 items-center">
                         <img className="w-12 h-12" src="https://i.ibb.co/b59v5m2/company-logo.png" alt="" />
-                        <h3 className="text-3xl font-bold text-[#2095AE] font-niconne">Tour <span className="text-yellow-400">Mentor</span></h3>
-                </div>
+                        <h3 className="flex text-3xl font-bold text-[#2095AE] font-niconne">Tour <span className="text-yellow-400">Mentor</span></h3>
                     </div>
+                </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                       {
-                        links
-                       }
+                        {
+                            links
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to='/login'>
+                        <button className="btn text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">Login</button>
+                    </Link>
                 </div>
             </div>
 
