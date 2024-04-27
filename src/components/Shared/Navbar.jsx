@@ -9,16 +9,16 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Navbar = () => {
-    // const { user, logOut } = useContext(AuthContext);
-    // console.log(user)
-    // const handleLogOut = () => {
-    //     logOut()
-    //         .then(toast.success("user log out successfully"))
-    //         .catch(error => {
-    //             console.error(error)
-    //             toast.error(error.massage)
-    //         })
-    // }
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user)
+    const handleLogOut = () => {
+        logOut()
+            .then(toast.success("user log out successfully"))
+            .catch(error => {
+                console.error(error)
+                toast.error(error.massage)
+            })
+    }
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -55,7 +55,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                {/* {
+                {
                     user ? <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
                         <div tabIndex={0} role="button" className="m-1">{user.photoURL ? <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="" /> : <img className="w-12 h-12 rounded-full" src={userProfile} alt="" />}</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow-xl bg-[#EDF7FA] rounded-box border-2 border-[#267188] w-52">
@@ -75,7 +75,7 @@ const Navbar = () => {
 
 
 
-                } */}
+                }
 
 
             </div>
