@@ -12,8 +12,8 @@ const Register = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col">
+        <div className="hero lg:min-h-screen bg-base-200">
+            <div className="hero-content flex-col md:w-[500px]">
                 <div className='max-w-6xl mx-auto'>
                     <Link to='/'>
                         <button className="flex my-12 text-[#2095AE] p-2 rounded-md hover:bg-[#2095AE] hover:text-white text-2xl font-rancho"><FaArrowLeftLong className='text-3xl'></FaArrowLeftLong>Back to home</button>
@@ -22,8 +22,20 @@ const Register = () => {
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Register now!</h1>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card shrink-0 w-full bg-base-100">
                     <form onSubmit={handleRegister} className="card-body">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="email" name="name" placeholder="Name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
+                        </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>

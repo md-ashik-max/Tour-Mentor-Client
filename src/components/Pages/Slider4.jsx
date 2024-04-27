@@ -4,7 +4,7 @@ import { FaStarHalfAlt } from "react-icons/fa";
 
 const Slider4 = () => {
     return (
-        <div className="h-[700px] w-full card shadow-xl image-full rounded-none">
+        <div className="h-[500px] md:h-[600px] lg:h-[700px] w-full card shadow-xl image-full rounded-none">
             <figure><img className="w-full" src="https://i.ibb.co/PGZZ9Ld/woman-feeding-colorful-fish-pond-tirta-gangga-water-palace-bali-indonesia.jpg" alt="" /></figure>
             <div data-aos="fade-up" className="card-body flex flex-col items-center justify-center">
                 <div>

@@ -1,4 +1,5 @@
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaGithub } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 
@@ -13,7 +14,7 @@ const Login = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero lg:min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                 <div className='max-w-6xl mx-auto'>
                     <Link to='/'>
@@ -23,7 +24,20 @@ const Login = () => {
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="m-8">
+                    <button className="btn w-full my-2 hover:bg-white">
+                        <FcGoogle className="text-xl"></FcGoogle>
+                        Login With Google
+                    </button>
+                    <button className="btn w-full mt-4 hover:bg-white">
+                        <FaGithub className="text-xl"></FaGithub>
+                        Login With Github
+                    </button>
+                </div>
+                <div className="divider mx-8">
+                    <h2>or</h2>
+                </div>
+                <div className="card shrink-0 w-full shadow-2xl bg-base-100">
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">

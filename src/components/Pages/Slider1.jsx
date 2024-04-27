@@ -7,8 +7,8 @@ const Slider1 = () => {
         Aos.init({ duration: 2000 });
     }, [])
     return (
-        <div className="h-[700px] w-full card shadow-xl image-full rounded-none">
-            <figure><img className="w-full" src="https://i.ibb.co/qgZDMT6/tea-garden.jpg" alt="Shoes" /></figure>
+        <div className="h-[500px] md:h-[600px] lg:h-[700px] w-full card shadow-xl image-full rounded-none">
+            <figure><img className="w-full" src="https://i.ibb.co/5c4hPVt/bengal-tiger.jpg" alt="Shoes" /></figure>
             <div data-aos="fade-up" className="card-body flex flex-col items-center justify-center">
                 <div>
                     <h2 className="card-title text-[55px] font-playFair text-white">Bangladesh</h2>

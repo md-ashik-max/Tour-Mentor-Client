@@ -12,6 +12,7 @@ import Home from './components/Pages/Home';
 import AddSpots from './components/Pages/AddSpots';
 import Login from './components/Pages/Login';
 import Register from './components/Pages/Register';
+import UpdateTouristSpot from './components/Pages/UpdateTouristSpot';
 
 const router = createBrowserRouter([
   {
@@ -24,10 +25,6 @@ const router = createBrowserRouter([
         element:<Home></Home>
       },
       {
-        path: '/addSpots',
-        element:<AddSpots></AddSpots>
-      },
-      {
         path: '/login',
         element:<Login></Login>
       },
@@ -35,6 +32,15 @@ const router = createBrowserRouter([
         path: '/register',
         element:<Register></Register>
       },
+      {
+        path: '/addSpots',
+        element:<AddSpots></AddSpots>
+      },
+      {
+        path: '/updateSpots',
+        element:<UpdateTouristSpot></UpdateTouristSpot>
+      },
+      
 
     ]
   },
