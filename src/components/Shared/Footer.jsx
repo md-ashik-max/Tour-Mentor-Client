@@ -1,9 +1,9 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
-// import logo from '../../assets/company logo.png'
+import footerBg from '../../assets/13.jpg'
 
 const Footer = () => {
     return (
-        <div className='md:flex justify-around items-center'>
+        <div className='md:flex justify-around items-center bg-cover bg-center' style={{backgroundImage:`url(${footerBg})`}}>
             <div>
                 <footer className="footer p-10 md:px-0 md:py-10 text-primary-content">
                     <aside>
