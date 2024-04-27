@@ -1,15 +1,18 @@
 import { FaArrowRight } from "react-icons/fa";
-
+import line from '../../assets/icons8-horizontal-line-100.png'
 
 
 const Country = () => {
     return (
-        <div className="mx-6 lg:max-w-6xl md:mx-auto my-24 grid gap-8 grid-cols-1 md:grid-cols-4">
+        <div className="mx-6 md:mx-6 lg:max-w-6xl lg:mx-auto my-24 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div className="h-96">
                 <small className="font-bold">LOOK FOR OUR STAY AND VACATION SOTS</small>
-                <h2 className="text-[40px] font-playFair font-bold mb-6">Our Popular Destinations</h2>
+                <h2 className="text-[40px] font-playFair font-bold">Our Popular Destinations</h2>
+                <div>
+                    <img className="h-16" src={line} alt="" />
+                </div>
                 <p>We offer amazing properties that are full of character, situated in beautiful neighborhoods so you can feel right at home anywhere in the world.</p>
-                <button className="btn my-6 text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">View All Destination <span><FaArrowRight></FaArrowRight></span></button>
+                <button className="btn mt-6 text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">View All Destination <span><FaArrowRight></FaArrowRight></span></button>
 
             </div>
             <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/7pv1jW5/gulshan.jpg)` }}>

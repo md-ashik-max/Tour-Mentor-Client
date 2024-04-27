@@ -1,8 +1,25 @@
+
 import { Link, NavLink } from "react-router-dom";
-// import logo from  '../../assets/company logo.png'
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { CgLogOut } from "react-icons/cg";
+import userProfile from '../../assets/user.png'
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Navbar = () => {
+    // const { user, logOut } = useContext(AuthContext);
+    // console.log(user)
+    // const handleLogOut = () => {
+    //     logOut()
+    //         .then(toast.success("user log out successfully"))
+    //         .catch(error => {
+    //             console.error(error)
+    //             toast.error(error.massage)
+    //         })
+    // }
+
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/allSpot">All Tourists Spot</NavLink></li>
@@ -38,11 +55,32 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login'>
-                        <button className="btn text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">Login</button>
-                    </Link>
-                </div>
+                {/* {
+                    user ? <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                        <div tabIndex={0} role="button" className="m-1">{user.photoURL ? <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="" /> : <img className="w-12 h-12 rounded-full" src={userProfile} alt="" />}</div>
+                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow-xl bg-[#EDF7FA] rounded-box border-2 border-[#267188] w-52">
+                            <div className="flex flex-col justify-center items-center">
+                                {user.photoURL ? <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="" /> : <img className="w-12 h-12 rounded-full" src={userProfile} alt="" />}
+                                <li className="text-black font-bold my-1">{user.displayName}</li>
+                                <Link to="userProfile"> <button className="btn border border-[#D2C196] text-[#D2C196] bg-white hover:bg-[#D2C196] hover:text-white mb-4">View Profile</button></Link>
+                            </div>
+                            <hr />
+                            <li><button onClick={handleLogOut} className="text-black font-bold hover:text-red-600">Log Out <CgLogOut className="text-xl font-bold"></CgLogOut></button></li>
+                        </ul>
+
+                    </div>
+                        :
+                        <Link className="btn text-[#267188] bg-white border border-[#267188] hover:text-white hover:bg-[#267188]" to="/login">Login</Link>
+
+
+
+
+                } */}
+
+
             </div>
+            </div>
+            <ToastContainer></ToastContainer>
 
         </div>
     );

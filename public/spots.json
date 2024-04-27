@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "image": "Image_URL_1",
+      "tourist_spot_name": "Golden Beach Resort",
+      "country_name": "Sunset Isles",
+      "location": "On the pristine shores of Sunset Isles, offering golden sands and crystal-clear waters.",
+      "short_description": "A tropical paradise for beach lovers and sun seekers.",
+      "average_cost": "$250",
+      "seasonality": "Summer",
+      "travel_time": "5 days",
+      "total_visitors_per_year": 12000
+    },
+    {
+      "id": 2,
+      "image": "Image_URL_2",
+      "tourist_spot_name": "Majestic Mountain Retreat",
+      "country_name": "Snowpeak Kingdom",
+      "location": "Nestled among the snow-capped peaks of Snowpeak Kingdom, providing panoramic views.",
+      "short_description": "An ideal destination for adventure enthusiasts and nature lovers.",
+      "average_cost": "$300",
+      "seasonality": "Winter",
+      "travel_time": "7 days",
+      "total_visitors_per_year": 8000
+    },
+    {
+      "id": 3,
+      "image": "Image_URL_3",
+      "tourist_spot_name": "Enchanted Forest Trails",
+      "country_name": "Woodland Realm",
+      "location": "Winding through the mystical woodlands of Woodland Realm, filled with ancient trees and hidden wonders.",
+      "short_description": "A magical escape for hikers and explorers seeking tranquility.",
+      "average_cost": "$150",
+      "seasonality": "Spring",
+      "travel_time": "3 days",
+      "total_visitors_per_year": 10000
+    },
+    {
+      "id": 4,
+      "image": "Image_URL_4",
+      "tourist_spot_name": "Urban Oasis",
+      "country_name": "Metropolis City",
+      "location": "In the heart of bustling Metropolis City, offering a blend of modern amenities and cultural experiences.",
+      "short_description": "An exciting destination for city dwellers and culture enthusiasts.",
+      "average_cost": "$200",
+      "seasonality": "All year round",
+      "travel_time": "4 days",
+      "total_visitors_per_year": 15000
+    }
+  ]
+  
