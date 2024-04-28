@@ -14,6 +14,7 @@ import Login from './components/Pages/Login';
 import Register from './components/Pages/Register';
 import UpdateTouristSpot from './components/Pages/UpdateTouristSpot';
 import AuthProvider from './providers/AuthProvider';
+import AllSpots from './components/Pages/AllSpots';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: '/addSpots',
         element: <AddSpots></AddSpots>
+      },
+      {
+        path: '/allSpots',
+        element: <AllSpots></AllSpots>,
+        loader: () => fetch('http://localhost:5000/spot'),
       },
       {
         path: '/updateSpots',
