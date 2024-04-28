@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('/spots.json')
+        loader: () => fetch('http://localhost:5000/spot'),
       },
       {
         path: '/login',
