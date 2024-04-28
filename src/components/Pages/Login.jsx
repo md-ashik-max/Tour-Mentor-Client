@@ -13,39 +13,39 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Login = () => {
 
-    // const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
-    // const [showPassword, setShowPassword] = useState(false);
-    // const location = useLocation()
-    // const navigate = useNavigate()
-    // const { register, handleSubmit, formState: { errors } } = useForm();
-    // const onSubmit = data => {
-    //     const email = data.email;
-    //     const password = data.password;
-    //     signIn(email, password)
-    //         .then(result => {
-    //             console.log(result.user)
-    //             navigate(location?.state ? location.state : "/")
-    //             toast.success('user login successfully')
-    //         })
-    //         .catch(error => {
-    //             console.error(error)
-    //             toast.error(error.message)
-    //         })
+    const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const location = useLocation()
+    const navigate = useNavigate()
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        const email = data.email;
+        const password = data.password;
+        signIn(email, password)
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
+                toast.success('user login successfully')
+            })
+            .catch(error => {
+                console.error(error)
+                toast.error(error.message)
+            })
 
-    // };
+    };
 
-    // const loginWithGoogle = () => {
-    //     googleLogin();
-    //     navigate(location?.state ? location.state : "/")
-    //     toast.success('user login successfully')
+    const loginWithGoogle = () => {
+        googleLogin();
+        navigate(location?.state ? location.state : "/")
+        toast.success('user login successfully')
 
-    // };
-    // const loginWithGithub = () => {
-    //     githubLogin();
-    //     navigate(location?.state ? location.state : "/")
-    //     toast.success('user login successfully')
+    };
+    const loginWithGithub = () => {
+        githubLogin();
+        navigate(location?.state ? location.state : "/")
+        toast.success('user login successfully')
 
-    // };
+    };
 
     return (
         <div className="flex justify-center my-12 mx-auto md:gap-12">
