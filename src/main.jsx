@@ -15,6 +15,7 @@ import Register from './components/Pages/Register';
 import UpdateTouristSpot from './components/Pages/UpdateTouristSpot';
 import AuthProvider from './providers/AuthProvider';
 import AllSpots from './components/Pages/AllSpots';
+import SpotDetails from './components/Pages/SpotDetails';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path: '/updateSpots',
         element: <UpdateTouristSpot></UpdateTouristSpot>
+      },
+      {
+        path: '/spotDetails/:id',
+        element:<SpotDetails></SpotDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/spot/${params.id}`)
       },
 
 

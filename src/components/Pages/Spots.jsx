@@ -24,7 +24,7 @@ const Spots = () => {
             </div>
             <div className='flex justify-center'>
                 <Link to="/allSpots">
-                    <button className="btn my-6 bg-transparent my-6 px-14 text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">View All</button>
+                    <button className="btn bg-transparent my-6 px-14 text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">View All</button>
                 </Link>
             </div>
         </div>
