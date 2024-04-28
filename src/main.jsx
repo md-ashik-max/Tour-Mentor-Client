@@ -16,6 +16,7 @@ import UpdateTouristSpot from './components/Pages/UpdateTouristSpot';
 import AuthProvider from './providers/AuthProvider';
 import AllSpots from './components/Pages/AllSpots';
 import SpotDetails from './components/Pages/SpotDetails';
+import PrivetRoutes from './routes/PrivetRoutes';
 
 const router = createBrowserRouter([
   {
@@ -38,11 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addSpots',
-        element: <AddSpots></AddSpots>
+        element: <PrivetRoutes><AddSpots></AddSpots></PrivetRoutes>
       },
       {
         path: '/allSpots',
-        element: <AllSpots></AllSpots>,
+        element: <PrivetRoutes><AllSpots></AllSpots></PrivetRoutes>,
         loader: () => fetch('http://localhost:5000/spot'),
       },
       {
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/spotDetails/:id',
-        element:<SpotDetails></SpotDetails>,
+        element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
         loader: ({ params }) => fetch(`http://localhost:5000/spot/${params.id}`)
       },
 
