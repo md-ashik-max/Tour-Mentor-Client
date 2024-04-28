@@ -2,7 +2,7 @@
 import Banner from "./Banner";
 import Country from "./Country";
 import Facilities from "./Facilities";
-// import Spots from "./Spots";
+import Spots from "./Spots";
 
 
 
@@ -12,7 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <Facilities></Facilities>
             <Country></Country>
-            {/* <Spots></Spots> */}
+            <Spots></Spots>
         </div>
     );
 };

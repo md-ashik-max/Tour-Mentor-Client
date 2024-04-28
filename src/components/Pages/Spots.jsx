@@ -8,7 +8,7 @@ const Spots = () => {
    const spots = useLoaderData();
     return (
         <div className="my-24">
-            <div className="text-center bg-[#5C626A]">
+            <div className="text-center">
                 <small className='font-jost font-bold'>EXPLORE OUR TOURS</small>
                 <h1 className="text-4xl font-playFair font-bold mt-6">New and Most
                     <br />
@@ -17,9 +17,9 @@ const Spots = () => {
                     <img src={line} alt="" />
                 </div>
             </div>
-            <div>
+            <div className='my-12 max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 {
-                    spots.map(spot=><Spot key={spot.id} spot={spot}></Spot>)
+                    spots.map(aSpot=><Spot key={aSpot._id} aSpot={aSpot}></Spot>)
                 }
             </div>
         </div>
