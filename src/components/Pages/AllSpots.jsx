@@ -3,10 +3,28 @@ import Spot from "./Spot";
 import bg from '../../assets/allSpots-bg.jpg'
 import { IoSearchOutline } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa6";
+import { useState } from "react";
 
 
 const AllSpots = () => {
     const spots = useLoaderData();
+    const[displaySpots,setDisplaySpots]=useState([spots])
+    const handleSpotFilter = filter => {
+        if(filter==='all'){
+            setDisplaySpots(spots);
+        }
+        else if (filter ==='averageCost'){
+            const filteredSpots = spots.filter(spot => spot.averageCost);
+            filteredSpots.sort((a, b) => a.averageCost - b.averageCost)
+            setDisplaySpots(filteredSpots);
+        }
+        else if (filter ==='time'){
+            const filteredSpots = spots.filter(spot => spot.travelTime);
+            filteredSpots.sort((a, b) => a.travelTime - b.travelTime)
+            setDisplaySpots(filteredSpots);
+        }
+       
+    }
     return (
         <div>
             <div className="h-[300px] md:h-[500px] flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
@@ -14,18 +32,17 @@ const AllSpots = () => {
                 <div className='mt-6 flex gap-6 md:gap-12 bg-white p-4 rounded-xl shadow-xl'>
                     <div className='flex justify-between md:gap-4 border-r-2 border-[#D2C196] md:pr-4'>
                         <div>
-                            <p className="font-semibold">Cost</p>
-                            <small>by cost</small>
+                            <p className="font-semibold">Type</p>
+                            <small>type of</small>
 
                         </div>
                         <div>
                             <details className="dropdown dropdown-bottom">
                                 <summary className="m-1 btn bg-white"><FaAngleDown></FaAngleDown></summary>
                                 <ul className="p-2 shadow menu dropdown-content z-[0] bg-base-100 rounded-box w-52">
-                                    <li><a> All</a></li>
-                                    <li><a> $300</a></li>
-                                    <li><a> $500</a></li>
-                                    <li><a> $700 </a></li>
+                                    <li onClick={()=>handleSpotFilter('all')}><a> All</a></li>
+                                    <li onClick={()=>handleSpotFilter('averageCost')}><a>Cost</a></li>
+                                    <li onClick={()=>handleSpotFilter('time')}><a>Time</a></li>
                                 </ul>
                             </details>
                         </div>
@@ -66,7 +83,7 @@ const AllSpots = () => {
             </div>
             <div className="mx-6 md:mx-8 grid gap-8 my-24 md:grid-cols-2 lg:grid-cols-4 lg:max-w-6xl lg:mx-auto">
                 {
-                    spots.slice(0, 8).map(aSpot => <Spot key={aSpot._id} aSpot={aSpot}></Spot>)
+                    displaySpots.map(aSpot => <Spot key={aSpot._id} aSpot={aSpot}></Spot>)
                 }
             </div>
 
