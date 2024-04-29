@@ -41,8 +41,22 @@ const Register = () => {
 
         setRegisterError('')
         createUser(email, password)
-            .then(() => {
+            .then((result) => {
                 toast.success('create account successfully')
+                const createdAt = result.user?.metadata?.creationTime;
+                const user = {fullName, email, createdAt: createdAt };
+                fetch('http://localhost:5000/user', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user,)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+
                 updateUserProfile(fullName, image)
                     .then(() => {
                         navigate(location?.state ? location.state : "/")
@@ -52,7 +66,6 @@ const Register = () => {
             })
             .catch(error => {
                 setRegisterError(error.message)
-                // toast.error("Oops! Email Already Registered")
             })
 
     }

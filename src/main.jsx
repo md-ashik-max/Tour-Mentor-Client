@@ -18,6 +18,7 @@ import AllSpots from './components/Pages/AllSpots';
 import SpotDetails from './components/Pages/SpotDetails';
 import PrivetRoutes from './routes/PrivetRoutes';
 import MyList from './components/Pages/MyList';
+import BangladeshSpots from './components/Pages/CountrySpot/BangladeshSpots';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,30 @@ const router = createBrowserRouter([
         path: '/myList',
         element: <PrivetRoutes><MyList></MyList></PrivetRoutes>,
         loader: () => fetch('http://localhost:5000/spot')
+      },
+      {
+        path: '/bangladesh',
+        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+      },
+      {
+        path: '/thailand',
+        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+      },
+      {
+        path: '/malaysia',
+        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+      },
+      {
+        path: '/indonesia',
+        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+      },
+      {
+        path: '/vietnam',
+        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+      },
+      {
+        path: '/cambodia',
+        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
       },
 
 

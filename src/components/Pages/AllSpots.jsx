@@ -8,22 +8,22 @@ import { useState } from "react";
 
 const AllSpots = () => {
     const spots = useLoaderData();
-    const[displaySpots,setDisplaySpots]=useState([spots])
+    const [displaySpot, setDisplaySpot] = useState(spots)
     const handleSpotFilter = filter => {
-        if(filter==='all'){
-            setDisplaySpots(spots);
+        if (filter === 'all') {
+            setDisplaySpot(spots);
         }
-        else if (filter ==='averageCost'){
+        if (filter === 'averageCost') {
             const filteredSpots = spots.filter(spot => spot.averageCost);
             filteredSpots.sort((a, b) => a.averageCost - b.averageCost)
-            setDisplaySpots(filteredSpots);
+            setDisplaySpot(filteredSpots);
         }
-        else if (filter ==='time'){
+        else if (filter === 'time') {
             const filteredSpots = spots.filter(spot => spot.travelTime);
             filteredSpots.sort((a, b) => a.travelTime - b.travelTime)
-            setDisplaySpots(filteredSpots);
+            setDisplaySpot(filteredSpots);
         }
-       
+
     }
     return (
         <div>
@@ -40,9 +40,9 @@ const AllSpots = () => {
                             <details className="dropdown dropdown-bottom">
                                 <summary className="m-1 btn bg-white"><FaAngleDown></FaAngleDown></summary>
                                 <ul className="p-2 shadow menu dropdown-content z-[0] bg-base-100 rounded-box w-52">
-                                    <li onClick={()=>handleSpotFilter('all')}><a> All</a></li>
-                                    <li onClick={()=>handleSpotFilter('averageCost')}><a>Cost</a></li>
-                                    <li onClick={()=>handleSpotFilter('time')}><a>Time</a></li>
+                                    <li onClick={() => handleSpotFilter('all')}><a> All</a></li>
+                                    <li onClick={() => handleSpotFilter('averageCost')}><a>Cost</a></li>
+                                    <li onClick={() => handleSpotFilter('time')}><a>Time</a></li>
                                 </ul>
                             </details>
                         </div>
@@ -83,7 +83,7 @@ const AllSpots = () => {
             </div>
             <div className="mx-6 md:mx-8 grid gap-8 my-24 md:grid-cols-2 lg:grid-cols-4 lg:max-w-6xl lg:mx-auto">
                 {
-                    displaySpots.map(aSpot => <Spot key={aSpot._id} aSpot={aSpot}></Spot>)
+                    displaySpot.map(aSpot => <Spot key={aSpot._id} aSpot={aSpot}></Spot>)
                 }
             </div>
 

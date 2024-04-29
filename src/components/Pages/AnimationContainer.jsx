@@ -15,7 +15,8 @@ const AnimationContainer = () => {
                 </h1>
             </div>
             <div className="text-center w-full mt-8">
-                <h3 className="text-2xl font-rancho">In Summer You Can go <span className='text-blue-500'>{text}</span> </h3>
+                <h3 className="text-2xl font-rancho">In summer, you can go on refreshing hikes in the mountains, relax on sun-kissed beaches,
+                <br /> or explore bustling cities bursting with cultural delights in : <span className='text-blue-500'>{text}</span> </h3>
             </div>
 
         </div>

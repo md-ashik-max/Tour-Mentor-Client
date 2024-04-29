@@ -90,7 +90,7 @@ const Navbar = () => {
                                     <div className="flex flex-col justify-center items-center">
                                         {user.photoURL ? <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="" /> : <img className="w-12 h-12 rounded-full" src={userProfile} alt="" />}
                                         <li className="text-black font-bold my-1">{user.displayName}</li>
-                                        <Link to="userProfile"> <button className="btn border border-[#D2C196] text-[#D2C196] bg-white hover:bg-[#D2C196] hover:text-white mb-4">View Profile</button></Link>
+                                        <Link to="myList"> <button className="btn border border-[#D2C196] text-[#D2C196] bg-white hover:bg-[#D2C196] hover:text-white mb-4">View Profile</button></Link>
                                     </div>
                                     <hr />
                                     <li><button onClick={handleLogOut} className="text-black font-bold hover:text-red-600">Log Out <CgLogOut className="text-xl font-bold"></CgLogOut></button></li>

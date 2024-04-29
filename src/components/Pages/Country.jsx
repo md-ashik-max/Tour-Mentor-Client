@@ -1,5 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import line from '../../assets/icons8-horizontal-line-100.png'
+import { Link } from "react-router-dom";
 
 
 const Country = () => {
@@ -15,11 +16,13 @@ const Country = () => {
                 <button className="btn mt-6 text-xl font-rancho border-2 border-[#2095AE] text-[#2095AE] hover:text-white hover:bg-[#2095AE] hover:border-[#2095AE]">View All Destination <span><FaArrowRight></FaArrowRight></span></button>
 
             </div>
-            <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/7pv1jW5/gulshan.jpg)` }}>
-                <div className="h-full w-full flex justify-center items-end hover:items-center">
-                    <h2 className="text-4xl font-playFair font-bold text-white">Bangladesh</h2>
+            <Link to='/bangladesh'>
+                <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/7pv1jW5/gulshan.jpg)` }}>
+                    <div className="h-full w-full flex justify-center items-end hover:items-center">
+                        <h2 className="text-4xl font-playFair font-bold text-white">Bangladesh</h2>
+                    </div>
                 </div>
-            </div>
+            </Link>
             <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/3Whh7L8/bangkok-thailand.jpg)` }}>
                 <div className="h-full w-full flex justify-center items-end hover:items-center">
                     <h2 className="text-4xl font-playFair font-bold text-white">Thailand</h2>
