@@ -7,7 +7,7 @@ const BangladeshSpots = () => {
     const [spots, setSpots] = useState([]);
     console.log(spots)
     useEffect(() => {
-        fetch(`http://localhost:5000/bangladeshSpots/${country}`)
+        fetch(`http://localhost:5000//bangladeshSpots/${country}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
