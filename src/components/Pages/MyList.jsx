@@ -3,7 +3,7 @@ import img from '../../assets/774418072505.jpg'
 import line from '../../assets/icons8-horizontal-line-100.png'
 import { AuthContext } from '../../providers/AuthProvider';
 import { MdDelete, MdEmail } from 'react-icons/md';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { LuPencil } from 'react-icons/lu';
 import Swal from 'sweetalert2';
 
@@ -82,7 +82,11 @@ const MyList = () => {
                                     <td>{spot.country}</td>
                                     <td>{spot.location}</td>
                                     <td>{spot.spot}</td>
-                                    <td><button className='btn border-[#267188] text-[#267188] bg-transparent hover:bg-[#267188] hover:text-white'><LuPencil className='text-xl'></LuPencil></button></td>
+                                    <td>
+                                        <Link to={`/updateSpots/${spot._id}`}>
+                                            <button className='btn border-[#267188] text-[#267188] bg-transparent hover:bg-[#267188] hover:text-white'><LuPencil className='text-xl'></LuPencil></button>
+                                        </Link>
+                                    </td>
                                     <td><button onClick={() => handleDelete(spot._id)} className='btn text-[#EA4744] border-[#EA4744] bg-transparent hover:text-white hover:bg-[#EA4744]'><MdDelete className='text-xl'></MdDelete></button></td>
                                 </tr>)
                             }
