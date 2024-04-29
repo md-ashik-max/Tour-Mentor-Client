@@ -17,6 +17,7 @@ import AuthProvider from './providers/AuthProvider';
 import AllSpots from './components/Pages/AllSpots';
 import SpotDetails from './components/Pages/SpotDetails';
 import PrivetRoutes from './routes/PrivetRoutes';
+import MyList from './components/Pages/MyList';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
         path: '/spotDetails/:id',
         element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
         loader: ({ params }) => fetch(`http://localhost:5000/spot/${params.id}`)
+      },
+      {
+        path: '/myList',
+        element: <PrivetRoutes><MyList></MyList></PrivetRoutes>,
+        loader: () => fetch('http://localhost:5000/spot')
       },
 
 
