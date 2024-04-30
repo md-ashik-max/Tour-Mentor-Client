@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import Spot from "../Spot";
 import bg from '../../../assets/allSpots-bg.jpg'
+import Spot from "../Spot";
 
-const BangladeshSpots = () => {
-    const country = "Bangladesh";
+
+const CambodiaSpots = () => {
+    const country = "Cambodia";
     const [spots, setSpots] = useState([]);
     console.log(spots)
     useEffect(() => {
-        fetch(`https://tour-mentor-server-lime.vercel.app/bangladeshSpots/${country}`)
+        fetch(`https://tour-mentor-server-lime.vercel.app/cambodiaSpots/${country}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -20,12 +21,10 @@ const BangladeshSpots = () => {
                 <img className="w-full h-full" src={bg} alt="" />
             </div>
             <div className="my-14 mx-6">
-                <h1 className="text-4xl font-bold font-playFair text-center w-full">Dream Your 
+                <h1 className="text-4xl font-bold font-playFair text-center w-full">Dream Your
                     <br />
-                    Next Trip in Bangladesh</h1>
-                    <p className="w-full text-center mt-4">Discover Bangladesh rich heritage and natural wonders. From the Sundarban mangrove 
-                        <br />
-                        forests to Coxs  Bazar sandy shores, each spot offers unique experiences that captivate travelers.</p>
+                    Next Trip in Cambodia</h1>
+                <p className="w-full text-center mt-4">Cambodia enchanting tourist spots beckon with ancient wonders and natural beauty. <br /> Marvel at the majestic Angkor Wat, immerse yourself in the bustling streets of Phnom Penh, <br /> and unwind on the pristine beaches of Sihanoukville.</p>
             </div>
             <div>
                 <div className="max-w-6xl mb-16 mx-6 lg:mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -40,4 +39,4 @@ const BangladeshSpots = () => {
     );
 };
 
-export default BangladeshSpots;
+export default CambodiaSpots;

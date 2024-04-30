@@ -23,31 +23,41 @@ const Country = () => {
                     </div>
                 </div>
             </Link>
-            <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/3Whh7L8/bangkok-thailand.jpg)` }}>
-                <div className="h-full w-full flex justify-center items-end hover:items-center">
-                    <h2 className="text-4xl font-playFair font-bold text-white">Thailand</h2>
+            <Link to='/thailand'>
+                <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/3Whh7L8/bangkok-thailand.jpg)` }}>
+                    <div className="h-full w-full flex justify-center items-end hover:items-center">
+                        <h2 className="text-4xl font-playFair font-bold text-white">Thailand</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/JQPgK34/indonesia.jpg)` }}>
-                <div className="h-full w-full flex justify-center items-end hover:items-center">
-                    <h2 className="text-4xl font-playFair font-bold text-white">Indonesia</h2>
+            </Link>
+            <Link to='/indonesia'>
+                <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/JQPgK34/indonesia.jpg)` }}>
+                    <div className="h-full w-full flex justify-center items-end hover:items-center">
+                        <h2 className="text-4xl font-playFair font-bold text-white">Indonesia</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/9HxRLPC/malaysia.jpg)` }}>
-                <div className="h-full w-full flex justify-center items-end hover:items-center">
-                    <h2 className="text-4xl font-playFair font-bold text-white">Malaysia</h2>
+            </Link>
+            <Link to='/malaysia'>
+                <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/9HxRLPC/malaysia.jpg)` }}>
+                    <div className="h-full w-full flex justify-center items-end hover:items-center">
+                        <h2 className="text-4xl font-playFair font-bold text-white">Malaysia</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/1TBYM8W/vietnam.jpg)` }}>
-                <div className="h-full w-full flex justify-center items-end hover:items-center">
-                    <h2 className="text-4xl font-playFair font-bold text-white">Vietnam</h2>
+            </Link>
+            <Link to='/vietnam'>
+                <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/1TBYM8W/vietnam.jpg)` }}>
+                    <div className="h-full w-full flex justify-center items-end hover:items-center">
+                        <h2 className="text-4xl font-playFair font-bold text-white">Vietnam</h2>
+                    </div>
                 </div>
-            </div>
-            <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/BcWcTnr/cambodia.jpg)` }}>
-                <div className="h-full w-full flex justify-center items-end hover:items-center">
-                    <h2 className="text-4xl font-playFair font-bold text-white">Cambodia</h2>
+            </Link>
+            <Link to='/cambodia'>
+                <div className="card h-96 rounded-md hover:scale-110 transition duration-500 cursor-pointer object-cover bg-cover bg-center" style={{ backgroundImage: `url(https://i.ibb.co/BcWcTnr/cambodia.jpg)` }}>
+                    <div className="h-full w-full flex justify-center items-end hover:items-center">
+                        <h2 className="text-4xl font-playFair font-bold text-white">Cambodia</h2>
+                    </div>
                 </div>
-            </div>
+            </Link>
             <div className="h-96 border-2 rounded-md text-center p-6">
                 <h2 className="text-3xl font-playFair font-bold">Join Us</h2>
                 <p className="my-6">Join our mailing list and receive the latest properties and travel inspiration straight to your inbox every month.</p>

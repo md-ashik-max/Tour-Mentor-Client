@@ -19,7 +19,7 @@ const UpdateTouristSpot = () => {
         const photo = form.photo.value;
         const info = { country, spot, location, averageCost, season, travelTime, visitors, description, photo };
         console.log(info)
-        fetch(`http://localhost:5000/spot/${_id}`, {
+        fetch(`https://tour-mentor-server-lime.vercel.app/spot/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

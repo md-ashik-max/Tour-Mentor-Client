@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import Spot from "../Spot";
 import bg from '../../../assets/allSpots-bg.jpg'
 
-const BangladeshSpots = () => {
-    const country = "Bangladesh";
+const IndonesiaSpots = () => {
+    const country = "Indonesia";
     const [spots, setSpots] = useState([]);
     console.log(spots)
     useEffect(() => {
-        fetch(`https://tour-mentor-server-lime.vercel.app/bangladeshSpots/${country}`)
+        fetch(`https://tour-mentor-server-lime.vercel.app/indonesiaSpots/${country}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -20,12 +20,12 @@ const BangladeshSpots = () => {
                 <img className="w-full h-full" src={bg} alt="" />
             </div>
             <div className="my-14 mx-6">
-                <h1 className="text-4xl font-bold font-playFair text-center w-full">Dream Your 
+                <h1 className="text-4xl font-bold font-playFair text-center w-full">Dream Your
                     <br />
-                    Next Trip in Bangladesh</h1>
-                    <p className="w-full text-center mt-4">Discover Bangladesh rich heritage and natural wonders. From the Sundarban mangrove 
-                        <br />
-                        forests to Coxs  Bazar sandy shores, each spot offers unique experiences that captivate travelers.</p>
+                    Next Trip in Indonesia</h1>
+                <p className="w-full text-center mt-4">Discover Bangladesh rich heritage and natural wonders. From the Sundarban mangrove
+                    <br />
+                    forests to Coxs  Bazar sandy shores, each spot offers unique experiences that captivate travelers.</p>
             </div>
             <div>
                 <div className="max-w-6xl mb-16 mx-6 lg:mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -40,4 +40,4 @@ const BangladeshSpots = () => {
     );
 };
 
-export default BangladeshSpots;
+export default IndonesiaSpots;

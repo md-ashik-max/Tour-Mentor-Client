@@ -25,7 +25,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/spot/${id}`, {
+                fetch(`https://tour-mentor-server-lime.vercel.app/spot/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

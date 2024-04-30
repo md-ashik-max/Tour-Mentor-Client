@@ -18,6 +18,10 @@ import SpotDetails from './components/Pages/SpotDetails';
 import PrivetRoutes from './routes/PrivetRoutes';
 import MyList from './components/Pages/MyList';
 import BangladeshSpots from './components/Pages/CountrySpot/BangladeshSpots';
+import ThailandSpots from './components/Pages/CountrySpot/ThailandSpots';
+import IndonesiaSpots from './components/Pages/CountrySpot/IndonesiaSpots';
+import MalaysiaSpots from './components/Pages/CountrySpot/MalaysiaSpots';
+import VietnamSpots from './components/Pages/CountrySpot/VietnamSpots';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spot'),
+        loader: () => fetch('https://tour-mentor-server-lime.vercel.app/spot'),
       },
       {
         path: '/login',
@@ -45,22 +49,22 @@ const router = createBrowserRouter([
       {
         path: '/allSpots',
         element: <PrivetRoutes><AllSpots></AllSpots></PrivetRoutes>,
-        loader: () => fetch('http://localhost:5000/spot'),
+        loader: () => fetch('https://tour-mentor-server-lime.vercel.app/spot'),
       },
       {
         path: '/updateSpots/:id',
         element: <UpdateTouristSpot></UpdateTouristSpot>,
-        loader: ({ params }) => fetch(`http://localhost:5000/spot/${params.id}`)
+        loader: ({ params }) => fetch(`https://tour-mentor-server-lime.vercel.app/spot/${params.id}`)
       },
       {
         path: '/spotDetails/:id',
         element:<PrivetRoutes><SpotDetails></SpotDetails></PrivetRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/spot/${params.id}`)
+        loader: ({ params }) => fetch(`https://tour-mentor-server-lime.vercel.app/spot/${params.id}`)
       },
       {
         path: '/myList',
         element: <PrivetRoutes><MyList></MyList></PrivetRoutes>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://tour-mentor-server-lime.vercel.app/spot')
       },
       {
         path: '/bangladesh',
@@ -68,23 +72,23 @@ const router = createBrowserRouter([
       },
       {
         path: '/thailand',
-        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+        element: <PrivetRoutes><ThailandSpots></ThailandSpots></PrivetRoutes>,
       },
       {
         path: '/malaysia',
-        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+        element: <PrivetRoutes><MalaysiaSpots></MalaysiaSpots></PrivetRoutes>,
       },
       {
         path: '/indonesia',
-        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+        element: <PrivetRoutes><IndonesiaSpots></IndonesiaSpots></PrivetRoutes>,
       },
       {
         path: '/vietnam',
-        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+        element: <PrivetRoutes><VietnamSpots></VietnamSpots></PrivetRoutes>,
       },
       {
         path: '/cambodia',
-        element: <PrivetRoutes><BangladeshSpots></BangladeshSpots></PrivetRoutes>,
+        element: <PrivetRoutes></PrivetRoutes>,
       },
 
 

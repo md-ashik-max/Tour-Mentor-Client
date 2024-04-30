@@ -45,7 +45,7 @@ const Register = () => {
                 toast.success('create account successfully')
                 const createdAt = result.user?.metadata?.creationTime;
                 const user = {fullName, email, createdAt: createdAt };
-                fetch('http://localhost:5000/user', {
+                fetch('https://tour-mentor-server-lime.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
